@@ -1,6 +1,9 @@
 package com.example.demo.model;
 
+import com.example.demo.util.InfoSplitter;
 import lombok.Getter;
+
+import java.util.List;
 
 public class Major {
     @Getter
@@ -12,11 +15,11 @@ public class Major {
     @Getter
     private UnitType unitType;
     @Getter
-    private String recommendedSemesterNumber;
+    private List<Integer> recommendedSemesterNumber;
     @Getter
     private int credit;
     @Getter
-    private String prerequisiteCode; // TODO: -> String[]
+    private List<String> prerequisiteCode;
 
     public Major(String majorName,
                  String unitCode,
@@ -29,22 +32,21 @@ public class Major {
         this.unitCode = unitCode;
         this.unitName = unitName;
         this.unitType = unitType;
-        this.recommendedSemesterNumber = recommendedSemesterNumber;
+        this.recommendedSemesterNumber = InfoSplitter.semesterSplitter(recommendedSemesterNumber);
         this.credit = credit;
-        this.prerequisiteCode = prerequisiteCode;
+        this.prerequisiteCode = InfoSplitter.requirementSplitter(prerequisiteCode);
     }
 
-
-
-    //TODO: constructor with String[] from the file
+    //constructor with String[] from the file
     public Major(String[] data) {
         this.majorName = data[0];
         this.unitCode = data[1];
         this.unitName = data[2];
         this.unitType = UnitType.valueOf(data[3]);
-        this.recommendedSemesterNumber = data[4];
+        this.recommendedSemesterNumber = InfoSplitter.semesterSplitter(data[4]);
         this.credit = Integer.parseInt(data[5]);
-        this.prerequisiteCode = data[6];
+        this.prerequisiteCode = InfoSplitter.requirementSplitter(data[6]);
     }
+
 
 }

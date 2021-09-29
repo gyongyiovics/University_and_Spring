@@ -6,7 +6,7 @@ import java.io.FileReader;
 
 public class DocumentReader {
     private static String regex = ";";
-    private static String prerequisiteRegex = "\\|";
+    //private static String prerequisiteRegex = "\\|";
     public static String path = "src/main/resources/szakok.txt";
 
     public static void main(String[] args) throws Exception {
