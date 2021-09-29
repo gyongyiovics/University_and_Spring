@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MajorHandler {
-    Map<String, List<Major>> majors = new HashMap<>();
+    public static Map<String, List<Major>> majors = new HashMap<>();
     //TODO: put this into config file!
     public static String path = "src/main/resources/szakok.txt";
 
@@ -23,5 +23,9 @@ public class MajorHandler {
         for (int i = 0; i < majors.size(); i++) {
             majors.put(data[0], bodyData);
         }
+    }
+
+    public static Map<String, List<Major>> getMajors() {
+        return majors;
     }
 }

@@ -1,0 +1,6 @@
+informatikus könyvtáros;IKT11-121;Olvasásszociológia, -pedagógia, -pszichológia;K;4;3;NULL
+japán;XFI19-101;Filozófiatörténet;K;1|2;2;NULL
+klasszika filológia;XFI19-101;Filozófiatörténet;K;1|2;2;NULL
+klasszika filológia;DIG-001;Digitális bölcsész kompetenciák;G;1|2|3|4|5|6;2;NULL
+klasszika filológia;FLN11-101;A nyelvtudomány alapjai;K;1;3;NULL
+klasszika filológia;OKE11-132;Ókori és keleti művészettörténet 2.;K;2;3;NULL
