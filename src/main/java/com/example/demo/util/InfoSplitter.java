@@ -8,6 +8,11 @@ public class InfoSplitter {
     //private static String regex = ";";
     private static String requirementRegex = "\\|";
 
+    public static void main(String[] args) {
+        System.out.println(semesterSplitter("2|3"));
+    }
+
+
     public static List<String> requirementSplitter(String str) {
         if(!str.equals("NULL")) {
             return Arrays.asList(str.split(requirementRegex));
@@ -18,7 +23,7 @@ public class InfoSplitter {
     public static List<Integer> semesterSplitter(String semester) {
         List<Integer> semesters = new ArrayList<>();
         String[] splitted = semester.split(requirementRegex);
-        for (int i = 0; i < semesters.size(); i++) {
+        for (int i = 0; i < splitted.length; i++) {
             semesters.add(Integer.parseInt(splitted[i]));
         }
         return semesters;

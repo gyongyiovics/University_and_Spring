@@ -22,7 +22,30 @@ public class InfoSplitterTest {
     }
 
     @Test
+    public void splitRequirementUnitWithMoreInput() {
+        String input4 = "IKT19-203|IKT17-291";
+        String[] stringList = new String[] {"IKT19-203", "IKT17-291"};
+        List <String> expected4 = Arrays.asList(stringList);
+        List<String> result4 = InfoSplitter.requirementSplitter(input4);
+        Assertions.assertTrue(compareLists(expected4, result4));
+    }
 
+    @Test
+    public void splitSemesterWithOneInput() {
+        String input2 = "1";
+        List <Integer> expectedIntegerList = Arrays.asList(Integer.parseInt(input2));
+        List <Integer> result = InfoSplitter.semesterSplitter(input2); //size --> 0?
+        Assertions.assertTrue(compareLists(expectedIntegerList, result));
+    }
+
+    @Test
+    public void splitSemesterWithMoreInput() {
+        String input3 = "1|2|3";
+        Integer[] integerList = new Integer[]{1,2,3};
+        List <Integer> expectedIntegerList = Arrays.asList(integerList);
+        List <Integer> result = InfoSplitter.semesterSplitter(input3);
+        Assertions.assertTrue(compareLists(expectedIntegerList, result));
+    }
 
     public <T> boolean compareLists(List<T> expected, List<T> actual) {
         if(!(expected.size() == actual.size())) {
