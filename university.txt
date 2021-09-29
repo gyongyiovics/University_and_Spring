@@ -1,0 +1,39 @@
+1@M
+
+feladat: fejtsd meg a feladat címét :)
+
+A szakok.txt fájl tartalmazza az adatokat, amikkel dolgoznod kell.
+
+A fájl részletes tartalma:
+szak megnevezése
+tanegység kódja
+tanegység megnevezése
+tanegység típusa, amelynek értéke lehet:
+K - kollokvium
+G - gyakorlat
+V - vizsga
+EF - egyéni felkészülés
+ajánlott félév(ek)
+| (AltGr + W) jellel elválasztva (ha több van)
+kredit
+előfeltétel(ek) kódja
+NULL szöveg, ha nincs előfeltétel
+| (AltGr + W) jellel elválasztva, ha több van
+csillag ( * ) jel áll a kód után, ha az gyenge előfeltétel
+
+
+Feladatok
+
+Olvasd be a fájl tartalmát! A tanegységeket rendezd szakok szerint!
+Írj metódust, amely visszaadja (adatszerkezetben) azokat a tanegységeket, amelyeknek nincs semmilyen előfeltétele.
+Írj metódust, amely két bemeneti paramétert kap: egy szakhoz tartozó tanegységek listáját és egy típust, és visszaadja (adatszerkezetben) az összes olyan típusú tanegységet a bemeneti paraméterként kapott listából.
+Írj metódust, amely visszaadja az összes legtöbb előfeltétellel rendelkező tanegységeket (az összes tanegység közül, és nem szakonként)!
+Például: A legtöbb előfeltétel, amellyel egy tanegység rendelkezik, 5. Az összes tanegység között 10 olyan tanegység van, amely 5 előfeltétellel rendelkezik. Ebben az esetben a metódusodnak össze kell gyűjtenie, és vissza kell adnia ezt a 10 tanegységet.
+Írj metódust, amely visszaadja azt a tanegységet (vagy tanegységeket), ahol a legtöbb egymásra épülő előfeltétel van!
+Egymásra épülő tanegység:
+	A tanegység előfeltétele B tanegység
+	B tanegység előfeltétele C tanegység
+	C tanegység előfeltétele D tanegység
+	--- A, B, C, D tanegységek egymásra épülnek
+
+
